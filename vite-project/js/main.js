@@ -1,4 +1,9 @@
 import '../styles/style.css'
+import {Menu,Name} from './menu';
+document.querySelector('#app').innerHTML = `
+<h1>I AM EVAN COW</h1>
+`;
+console.log(Menu, Name);
 /*import javascriptLogo from './javascript.svg'
 import viteLogo from '/vite.svg'
 import { setupCounter } from '../counter.js'
@@ -22,4 +27,3 @@ document.querySelector('#app').innerHTML = `
 `
 
 setupCounter(document.querySelector('#counter'))*/
-
