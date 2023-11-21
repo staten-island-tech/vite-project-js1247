@@ -4,6 +4,6 @@ const DOMSelectors = {
     sides: document.querySelector("#sides-button"),
     drinks: document.querySelector("#drinks-button"),
     specials: document.querySelector("#specials-button"),
-    box: document.querySelector(".cards"),
+    cards: document.querySelector(".cards"),
 }
 export {DOMSelectors};
