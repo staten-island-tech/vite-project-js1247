@@ -1,12 +1,86 @@
-html,
-body,
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-size: 62.5%;
+:root {
+  --primary-red: #ff4242;
+  --primary-yellow: #ffd700;
+  --main-bg-color: #fff;
+  --card-bg-color: var(--main-bg-color);
+  --card-border-color: #ccc;
+  --text-color: #333;
 }
 
-:root {
-    --light-blue:#98c8f5;
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+.theme {
+  text-align: center;
+  padding: 20px;
+  background-color: var(--primary-red);
+  color: #fff;
+}
+
+.theme-switch {
+  margin-bottom: 20px;
+}
+
+.menu-items {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.menu-items input {
+  margin: 0 10px;
+  background-color: var(--primary-red);
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.menu-items input:hover {
+  background-color: var(--primary-yellow);
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  border: 1px solid var(--card-border-color);
+  border-radius: 8px;
+  margin: 10px;
+  padding: 15px;
+  text-align: center;
+  width: 200px;
+  background-color: var(--card-bg-color);
+  transition: background-color 0.3s;
+}
+
+.card:hover {
+  background-color: var(--primary-yellow);
+}
+
+.card-title {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: var(--primary-red);
+}
+
+.card-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.card-description {
+  font-size: 14px;
+  margin-top: 10px;
+  color: var(--text-color);
 }
