@@ -6,4 +6,5 @@ const DOMSelectors = {
     specials: document.querySelector("#specials-button"),
     cards: document.querySelector(".cards"),
 }
+
 export {DOMSelectors};
