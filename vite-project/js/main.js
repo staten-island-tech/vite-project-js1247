@@ -72,42 +72,30 @@ document.querySelector("#theme-switch").addEventListener("click", function() {
     );
   }
 
-  function deleteCards() {
-    const all = document.querySelectorAll("#all");
-    const burgers = document.querySelectorAll("#burgers");
-    const sides = document.querySelectorAll("#sides");
-    const drinks = document.querySelectorAll("#drinks");
-    const specials = document.querySelectorAll("#specials");
-    all.forEach((food) => food.remove());
-    burgers.forEach((food) => food.remove());
-    sides.forEach((food) => food.remove());
-    drinks.forEach((food) => food.remove());
-    specials.forEach((food) => food.remove());
-}
-
 DOMSelectors.all.addEventListener("click", function () {
+  DOMSelectors.cards.innerHTML = '';
   insertAll();
-  deleteCards();
+
 });
 
 DOMSelectors.burgers.addEventListener("click", function () {
+  DOMSelectors.cards.innerHTML = '';
   insertBurgers();
-  deleteCards();
 });
 
 DOMSelectors.sides.addEventListener("click", function () {
+  DOMSelectors.cards.innerHTML = '';
   insertSides();
-  deleteCards();
 });
 
 DOMSelectors.drinks.addEventListener("click", function () {
+  DOMSelectors.cards.innerHTML = '';
   insertDrinks();
-  deleteCards();
 });
 
 DOMSelectors.specials.addEventListener("click", function () {
+  DOMSelectors.cards.innerHTML = '';
   insertSpecials();
-  deleteCards();
 });
 
 insertAll();
