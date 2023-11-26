@@ -78,11 +78,11 @@ document.querySelector("#theme-switch").addEventListener("click", function() {
     const sides = document.querySelectorAll("#sides");
     const drinks = document.querySelectorAll("#drinks");
     const specials = document.querySelectorAll("#specials");
-    all.forEach((item) => item.remove());
-    burgers.forEach((item) => item.remove());
-    sides.forEach((item) => item.remove());
-    drinks.forEach((item) => item.remove());
-    specials.forEach((item) => item.remove());
+    all.forEach((food) => food.remove());
+    burgers.forEach((food) => food.remove());
+    sides.forEach((food) => food.remove());
+    drinks.forEach((food) => food.remove());
+    specials.forEach((food) => food.remove());
 }
 
 DOMSelectors.all.addEventListener("click", function () {
