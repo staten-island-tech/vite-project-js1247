@@ -1,28 +1,43 @@
 :root {
-  --primary-red: #ff4242;
-  --primary-yellow: #ffd700;
-  --main-bg-color: #fff;
-  --card-bg-color: var(--main-bg-color);
-  --card-border-color: #ccc;
-  --text-color: #333;
+  --cool-primary: #87CEEB;
+  --cool-accent: rgb(151, 169, 177);
+
+  --warm-primary: #e74c3c;
+  --warm-accent: #e6b86e;
 }
 
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: 'Times New Roman', Times, serif;
   margin: 0;
   padding: 0;
   transition: background-color 0.5s, color 0.5s;
+  font-size: 30px;
+}
+
+body.cool {
+  --primary: var(--cool-primary);
+  --accent: var(--cool-accent);
+}
+
+body.warm {
+  --primary: var(--warm-primary);
+  --accent: var(--warm-accent);
 }
 
 .theme {
   text-align: center;
   padding: 20px;
-  background-color: var(--primary-red);
-  color: #fff;
+  background-color: var(--primary);
+  color: #ffffff;
 }
 
-.theme-switch {
-  margin-bottom: 20px;
+#theme-switch {
+  margin-bottom: 30px;
+  padding: 5px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
 }
 
 .menu-items {
@@ -33,17 +48,16 @@ body {
 
 .menu-items input {
   margin: 0 10px;
-  background-color: var(--primary-red);
-  color: #fff;
+  padding: 10px;
   border: none;
-  padding: 10px 15px;
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s;
+  font-size: 15px;
 }
 
 .menu-items input:hover {
-  background-color: var(--primary-yellow);
+  background-color: var(--accent);
 }
 
 .cards {
@@ -53,34 +67,31 @@ body {
 }
 
 .card {
-  border: 1px solid var(--card-border-color);
-  border-radius: 8px;
+  border: 5px solid var(--accent);
+  border-radius: 50px;
   margin: 10px;
   padding: 15px;
   text-align: center;
-  width: 200px;
-  background-color: var(--card-bg-color);
+  width: 350px;
   transition: background-color 0.3s;
 }
 
 .card:hover {
-  background-color: var(--primary-yellow);
+  background-color: var(--accent);
 }
 
 .card-title {
-  font-size: 18px;
-  margin-bottom: 10px;
-  color: var(--primary-red);
+  font-size: 40px;
+  margin: 15px;
 }
 
 .card-image {
   max-width: 100%;
   height: auto;
-  border-radius: 4px;
+  border-radius: 20px;
 }
 
 .card-description {
-  font-size: 14px;
-  margin-top: 10px;
-  color: var(--text-color);
+  font-size: 25px;
+  margin-top: 15px;
 }
