@@ -102,9 +102,10 @@ document.querySelector("#theme-switch").addEventListener("click", function () {
 const deleteFood = function () {
   document.querySelectorAll("#all-button").forEach((food) => food.remove());
 };
+
 let buttons = document.querySelectorAll(".food-button");
 buttons.forEach((btn) =>
-  btn.addEventListener("click", function () {
+  btn.addEventListener("click", function() {
     let filter = btn.textContent;
     deleteFood();
     menu
@@ -112,3 +113,13 @@ buttons.forEach((btn) =>
       .foreach((cards) => foodCreate(cards));
   })
 );
+
+const foodCreate = function() {
+  DOMSelectors.cards.insertAdjacentHTML("beforeend",
+    `<div class="card" id="Drinks">
+      <h2 class="card-title">${food.name}</h2>
+      <img src="${food.image}" alt="${food.name}" class="card-image">
+      <h3 class="card-description">${food.price} Popularity: ${food.popularity}</h3>
+    </div>
+    `)
+};
