@@ -12,16 +12,16 @@ document.querySelector("#theme-switch").addEventListener("click", function () {
   }
 });
 
-//   function insertAll() {
-//     menu.forEach((food) => DOMSelectors.cards.insertAdjacentHTML("beforeend",
-//     `<div class="card" id="all">
-//       <h2 class="card-title">${food.name}</h2>
-//       <img src="${food.image}" alt="${food.name}" class="card-image">
-//       <h3 class="card-description">${food.price} Popularity: ${food.popularity}</h3>
-//     </div>
-//     `)
-//     );
-//   }
+  function insertAll() {
+    menu.forEach((food) => DOMSelectors.cards.insertAdjacentHTML("beforeend",
+    `<div class="card" id="all">
+      <h2 class="card-title">${food.name}</h2>
+      <img src="${food.image}" alt="${food.name}" class="card-image">
+      <h3 class="card-description">${food.price} Popularity: ${food.popularity}</h3>
+    </div>
+    `)
+    );
+  }
 
 //   function insertBurgers() {
 //     const menuFilters = menu.filter((food) => food.type.includes("Burgers"));
@@ -71,50 +71,46 @@ document.querySelector("#theme-switch").addEventListener("click", function () {
 //     );
 //   }
 
-// DOMSelectors.all.addEventListener("click", function () {
-//   DOMSelectors.cards.innerHTML = '';
-//   insertAll();
+DOMSelectors.all.addEventListener("click", function () {
+  DOMSelectors.cards.innerHTML = '';
+  //insertAll();
 
-// });
+});
 
-// DOMSelectors.burgers.addEventListener("click", function () {
-//   DOMSelectors.cards.innerHTML = '';
-//   insertBurgers();
-// });
+DOMSelectors.burgers.addEventListener("click", function () {
+  DOMSelectors.cards.innerHTML = '';
+  //insertBurgers();
+});
 
-// DOMSelectors.sides.addEventListener("click", function () {
-//   DOMSelectors.cards.innerHTML = '';
-//   insertSides();
-// });
+DOMSelectors.sides.addEventListener("click", function () {
+  DOMSelectors.cards.innerHTML = '';
+  //insertSides();
+});
 
-// DOMSelectors.drinks.addEventListener("click", function () {
-//   DOMSelectors.cards.innerHTML = '';
-//   insertDrinks();
-// });
+DOMSelectors.drinks.addEventListener("click", function () {
+  DOMSelectors.cards.innerHTML = '';
+  //insertDrinks();
+});
 
-// DOMSelectors.specials.addEventListener("click", function () {
-//   DOMSelectors.cards.innerHTML = '';
-//   insertSpecials();
-// });
+DOMSelectors.specials.addEventListener("click", function () {
+  DOMSelectors.cards.innerHTML = '';
+  //insertSpecials();
+});
 
-// insertAll();
+insertAll();
 
-const deleteFood = function () {
-  document.querySelectorAll("#all-button").forEach((food) => food.remove());
-};
 
-let buttons = document.querySelectorAll(".food-button");
+const buttons = document.querySelectorAll(".food-button");
 buttons.forEach((btn) =>
   btn.addEventListener("click", function() {
     let filter = btn.textContent;
-    deleteFood();
     menu
       .filter((food) => food.type.includes(filter))
-      .foreach((cards) => foodCreate(cards));
+      .forEach((cards) => foodCreate(cards));
   })
 );
 
-const foodCreate = function() {
+const foodCreate = function(food) {
   DOMSelectors.cards.insertAdjacentHTML("beforeend",
     `<div class="card" id="Drinks">
       <h2 class="card-title">${food.name}</h2>
