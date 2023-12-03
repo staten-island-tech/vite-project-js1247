@@ -98,6 +98,8 @@ document.querySelector("#theme-switch").addEventListener("click", function () {
 
 // insertAll();
 
+
+// Add a new food card to the end of the list
 function insertCard(food) {
   DOMSelectors.cards.insertAdjacentHTML(
     "beforeend",
@@ -109,10 +111,12 @@ function insertCard(food) {
   );
 }
 
+// Remove all displayed food cards
 function removeAllCards() {
   document.querySelectorAll(".card").forEach((card) => card.remove());
 }
 
+// Convert the data into a more organized list
 function mapMenuData() {
   return menu.map((food) => ({
     type: food.type,
@@ -123,6 +127,7 @@ function mapMenuData() {
   }));
 }
 
+// Choose which food items to display
 function filterAndInsert(category) {
   removeAllCards();
 
@@ -135,11 +140,13 @@ function filterAndInsert(category) {
     filteredMenu = menuData.filter(food => food.type.includes(category));
   }
 
+  // Show the selected food items
   filteredMenu.forEach(food => {
     insertCard(food);
   });
 }
 
+// Button click events
 DOMSelectors.all.addEventListener("click", () => filterAndInsert('all'));
 DOMSelectors.burgers.addEventListener("click", () => filterAndInsert('Burgers'));
 DOMSelectors.sides.addEventListener("click", () => filterAndInsert('Sides'));
